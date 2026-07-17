@@ -87,7 +87,7 @@ if st.button('Predict'):
         chart = (alt.Chart(comp_df).mark_bar().encode(
             x = 'x',
             y = 'y',
-            tooltip = ['x', 'y', 'Model Prediction'])
+            tooltip = ['x', 'y', 'Model Prediction']))
             st.altair_chart(chart, use_container_width = True)
         st.bar_chart(x = all_model_name, y = model_prob)
         data = pd.Series(model_ans)
