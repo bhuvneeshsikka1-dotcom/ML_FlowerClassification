@@ -70,7 +70,7 @@ if st.button('Predict'):
         for model in all_models:
             ans = model.predict([user_input])[0]
             try:
-            prob = model.predict_proba([user_input]).max()
+              prob = model.predict_proba([user_input]).max()
             except:
                 prob = 1
             model_prob.append(prob)
