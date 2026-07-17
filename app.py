@@ -88,7 +88,7 @@ if st.button('Predict'):
             x = 'x',
             y = 'y',
             tooltip = ['x', 'y', 'Model Prediction']))
-            st.altair_chart(chart, use_container_width = True)
+        st.altair_chart(chart, use_container_width = True)
         st.bar_chart(x = all_model_name, y = model_prob)
         data = pd.Series(model_ans)
         final_ans = data.mode().values[0]
